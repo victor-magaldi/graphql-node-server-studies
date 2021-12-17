@@ -9,6 +9,7 @@
     "dev": "yarn nodemon index.js"
   },
   "dependencies": {
+    "apollo-server": "^3.5.0",
     "graphql": "^16.1.0",
     "nodemon": "^2.0.9"
   }
