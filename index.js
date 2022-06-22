@@ -9,7 +9,7 @@ const typeDefs = gql`
     body: String
   }
   type Query {
-    posts: [Post]
+    getAllPosts: [Post]
   }
 `;
 
@@ -17,7 +17,7 @@ const typeDefs = gql`
 // schema. This resolver retrieves books from the "books" array above.
 const resolvers = {
   Query: {
-    posts: getAllPosts,
+    getAllPosts: getAllPosts,
   },
 };
 
@@ -26,4 +26,4 @@ const server = new ApolloServer({ typeDefs, resolvers });
 // The `listen` method launches a web server.
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
-});
+}).catch(err=>`Algum erro ocorreu`);
