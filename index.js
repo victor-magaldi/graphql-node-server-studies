@@ -1,5 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server");
-const { getUsers } = require("./resolvers/getBooks");
+const { getAllPosts } = require("./resolvers/getBooks");
 
 const typeDefs = gql`
   type Post {
@@ -17,7 +17,7 @@ const typeDefs = gql`
 // schema. This resolver retrieves books from the "books" array above.
 const resolvers = {
   Query: {
-    posts: g,
+    posts: getAllPosts,
   },
 };
 

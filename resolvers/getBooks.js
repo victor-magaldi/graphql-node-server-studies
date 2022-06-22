@@ -24,8 +24,8 @@ const posts = [
       "accusamus ratione error aut",
   },
 ];
-getUsers = async () => {
+getAllPosts = async () => {
   return posts;
 };
 
-module.exports = { getUsers };
+module.exports = { getAllPosts };
